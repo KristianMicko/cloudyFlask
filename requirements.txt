@@ -1,6 +1,5 @@
 wheel
 numpy
-keras
 tensorflow
 opencv-python
 pillow
