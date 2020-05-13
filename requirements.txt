@@ -1,5 +1,5 @@
 wheel
-CORS
+Flask-Cors
 numpy
 tensorflow
 opencv-python
