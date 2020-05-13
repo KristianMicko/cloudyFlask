@@ -30,7 +30,7 @@ def compute():
     dict_image = dict(image)
     myDb = MYSQL.connect(host="147.232.40.14", user="km863qc", passwd="km863qc", database="km863qc", port=3306)
     cursor = myDb.cursor()
-    cursor.execute("INSERT INTO Nakup (Nakup) VALUES ('{}')".format(data_dict['image']))
+    cursor.execute("INSERT INTO Nakup (Nakup) VALUES ('{}')".format(dict_image['image']))
     myDb.commit()
     cursor.close()
     myDb.close()
