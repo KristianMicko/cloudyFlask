@@ -1,3 +1,4 @@
 wheel
 Flask-Cors
 numpy
+mysql-connector
