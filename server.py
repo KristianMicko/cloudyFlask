@@ -14,11 +14,14 @@ CORS(app)
 @app.route('/', methods=['GET'])
 def computing():
     #with open('data.JSON') as json_file:
-     #   data = json.load(json_file) 
+    #    data = json.load(json_file) 
     #return  jsonify(data),200
+    myDb = MYSQL.connect(host="147.232.40.14", user="km863qc", passwd="km863qc", database="km863qc", port=3306)
     cursor = myDb.cursor()
     cursor.execute("SELECT * from Users")
     result = cursor.fetchall()
+    cursor.close()
+    myDb.close()
     return jsonify(result)
 
 @app.route('/image', methods=['POST'])
