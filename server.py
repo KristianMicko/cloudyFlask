@@ -12,9 +12,13 @@ CORS(app)
 
 @app.route('/', methods=['GET'])
 def computing():
-    with open('data.JSON') as json_file:
-        data = json.load(json_file) 
-    return  jsonify(data),200
+    #with open('data.JSON') as json_file:
+     #   data = json.load(json_file) 
+    #return  jsonify(data),200
+    cursor = myDb.cursor()
+    cursor.execute("SELECT * from Users")
+    result = cursor.fetchall()
+    return jsonify(result)
 
 @app.route('/image', methods=['POST'])
 def compute():
