@@ -1,4 +1,5 @@
 wheel
+CORS
 numpy
 tensorflow
 opencv-python
