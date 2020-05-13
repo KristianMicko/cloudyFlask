@@ -1,6 +1,3 @@
 wheel
 Flask-Cors
 numpy
-tensorflow
-opencv-python
-pillow
