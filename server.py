@@ -18,7 +18,7 @@ def computing():
     #return  jsonify(data),200
     myDb = MYSQL.connect(host="147.232.40.14", user="km863qc", passwd="km863qc", database="km863qc", port=3306)
     cursor = myDb.cursor()
-    cursor.execute("SELECT * from Users")
+    cursor.execute("SELECT * FROM Kosik")
     result = cursor.fetchall()
     cursor.close()
     myDb.close()
