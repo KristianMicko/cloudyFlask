@@ -47,3 +47,13 @@ def makeBasket():
     cursor.close()
     myDb.close()
     return jsonify("Created"),201
+
+@app.route('/', methods=['DELETE'])
+def truncate():
+    myDb = MYSQL.connect(host="147.232.40.14", user="km863qc", passwd="km863qc", database="km863qc", port=3306)
+    cursor = myDb.cursor()
+    cursor.execute("truncate Kosik")
+    myDb.commit()
+    cursor.close()
+    myDb.close()
+    return jsonify("Deleted"),204
